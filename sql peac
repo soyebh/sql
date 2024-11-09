@@ -1,0 +1,62 @@
+(1)Create a table "Students" with a primary key constraint on the "StudentID" column.
+
+create database clg
+
+use  clg
+
+create table student(
+StudentID int primary key,
+name varchar (29)
+);
+
+(2)Create a table "Employees" with a unique constraint on the "Email" column.
+
+create table Employees(
+email varchar (29),
+unique key (email)
+);
+
+
+(3)Define a "Products" table where the "ProductID" column is set to AUTO_INCREMENT.
+
+create table product(
+ProductID int AUTO_INCREMENT primary key
+);
+
+
+(4)Create a table "Orders" where "OrderID" is the primary key and the "CustomerID" column cannot be NULL
+
+Create table Orders(
+orderid int primary key,
+CustomerID int not NULL
+
+)
+
+(5)Define a "Books" table with a foreign key constraint on "AuthorID" referencing the "Authors" table.
+
+
+CREATE TABLE Authors 
+( AuthorID INT AUTO_INCREMENT PRIMARY KEY,
+ AuthorName VARCHAR(255) NOT NULL ); 
+ 
+ 
+ CREATE TABLE Books 
+ ( BookID INT AUTO_INCREMENT PRIMARY KEY, 
+ AuthorID INT, 
+ FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID) );
+
+
+
+(6)Create a table "Sales" with a default value of 0 for the "Discount" column.
+
+CREATE TABLE Sales (
+    SaleID int  AUTO_INCREMENT PRIMARY KEY,
+    Discount int DEFAULT 0
+);
+
+
+(7)Add a check constraint to a "Students" table ensuring that "Age" must be greater than 18.
+
+CREATE TABLE Students ( 
+ Age INT, CHECK (Age > 18) );
+
