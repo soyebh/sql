@@ -1,0 +1,72 @@
+(1)Write a query to drop a database named "OldRecords".
+
+create database OldRecords
+
+drop database OldRecords
+
+(2)Drop a table named "TempData" from your current database.
+create database teen
+use teen
+create table TempData(
+id int primary key
+)
+
+select*from TempData
+
+drop table TempData
+
+(3)Write a query to delete all data from the "Sales" table without dropping the table itself.
+
+create database teen
+use teen
+create table Sales(
+id int primary key
+)
+select*from  Sales
+insert into sales values (1),(2),(3),(4)
+TRUNCATE TABLE Sales
+select*from  Sales
+
+(4)Use DELETE to remove all rows from the "Students" table but keep the table structure.
+
+create database teen
+use teen
+create table Students(
+id int primary key,
+name varchar (29),
+surname varchar (29)
+)
+select*from  Students
+insert into  Students values (1,"ZAid","Khan"),(2,"xyz","Khan"),(3,"zyx","Khan")
+select*from  Students
+DELETE  FROM Students;
+select*from  Students
+
+
+(5)Write a query to drop a table named "BackupData" only if it exists.
+
+create database BackupData
+drop  database if exists BackupData
+
+(6)Delete a specific row from the "Products" table where "ProductID" is 101.
+
+create database teen
+use teen
+create table Products(
+ProductID int primary key,
+name varchar (29),
+surname varchar (29)
+)
+select*from  Products
+insert into  Products values (101,"ZAid","Khan"),(2,"xyz","Khan"),(3,"zyx","Khan")
+select*from  Products
+DELETE FROM Products where ProductID = 101
+select*from  Products
+
+
+(7)Drop a database named "TestDatabase" only if it exists.
+
+create database TestDatabase
+drop database if exists TestDatabase
+
+
